@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plural &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Point" href="../point/index.html" />
+    <link rel="prev" title="Null" href="../null/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../point/index.html" title="Point"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../null/index.html" title="Null"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-plural">
+<span id="plural"></span><h1>Plural<a class="headerlink" href="#module-plural" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-plural.plural"></span><div class="section" id="id1">
+<h2>Plural<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p class="graphviz">
+<img src="../_images/inheritance-fb7339833fa50ad7cce915c7950312c6383949e1.png" alt="Inheritance diagram of Plural" usemap="#inheritance97f996cd70" class="inheritance"/>
+<map id="inheritance97f996cd70" name="inheritance97f996cd70">
+<area shape="rect" id="node1" href="#plural.plural.Plural" title="Base class to return the plural form of a number. Sub&#45;classed for specific languages." alt="" coords="6,5,146,35"/>
+</map>
+</p>
+<dl class="class">
+<dt id="plural.plural.Plural">
+<em class="property">class </em><tt class="descclassname">plural.plural.</tt><tt class="descname">Plural</tt><a class="headerlink" href="#plural.plural.Plural" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class to return the plural form of a number. Sub-classed for specific languages.</p>
+<dl class="classmethod">
+<dt id="plural.plural.Plural.dual">
+<em class="property">classmethod </em><tt class="descname">dual</tt><big>(</big><em>singular</em>, <em>plural</em><big>)</big><a class="headerlink" href="#plural.plural.Plural.dual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dual form for a number. (In this default class, it is just the singular form if a plural form isn&#8217;t specified).</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="plural.plural.Plural.indefinite">
+<em class="property">classmethod </em><tt class="descname">indefinite</tt><big>(</big><em>noun</em><big>)</big><a class="headerlink" href="#plural.plural.Plural.indefinite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indefinite article for this noun (i.e. a or an).</p>
+<p>Actually, returns &#8216;&#8217; or &#8216;n&#8221;, as this allows format strings to be written as &#8220;a{n}&#8221;.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="plural.plural.Plural.multiple">
+<em class="property">classmethod </em><tt class="descname">multiple</tt><big>(</big><em>singular</em>, <em>plural</em><big>)</big><a class="headerlink" href="#plural.plural.Plural.multiple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the multiple form for a number. (In this default class, it is just the dual form).</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="plural.plural.Plural.plural">
+<em class="property">classmethod </em><tt class="descname">plural</tt><big>(</big><em>number</em>, <em>singular</em>, <em>plural=None</em><big>)</big><a class="headerlink" href="#plural.plural.Plural.plural" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the appropriate singular/plural form.</p>
+<p>Note the special case. If singular is blank, always return blank.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="plural.plural.Plural.single">
+<em class="property">classmethod </em><tt class="descname">single</tt><big>(</big><em>singular</em>, <em>plural</em><big>)</big><a class="headerlink" href="#plural.plural.Plural.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the singular form for a number.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plural</a><ul>
+<li><a class="reference internal" href="#id1">Plural</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../null/index.html"
+                        title="previous chapter">Null</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../point/index.html"
+                        title="next chapter">Point</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/plural/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../point/index.html" title="Point"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../null/index.html" title="Null"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Quantity &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Registered" href="../registered/index.html" />
+    <link rel="prev" title="Point" href="../point/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../registered/index.html" title="Registered"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../point/index.html" title="Point"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-quantity">
+<span id="quantity"></span><h1>Quantity<a class="headerlink" href="#module-quantity" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-quantity.quantity"></span><div class="section" id="id1">
+<h2>Quantity<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="quantity.quantity.Fixed_Quantity">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Fixed_Quantity</tt><a class="headerlink" href="#quantity.quantity.Fixed_Quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A floating quantity in a non-specific <em>fixed</em> unit.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-b90f5a701b43302bd85c4f6f00fd2646ff86f438.png" alt="Inheritance diagram of Fixed_Quantity" usemap="#inheritancef39204ec8f" class="inheritance"/>
+<map id="inheritancef39204ec8f" name="inheritancef39204ec8f">
+<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="370,4,547,27"/>
+<area shape="rect" id="node4" href="#quantity.quantity.Fixed_Quantity" title="A floating quantity in a non&#45;specific *fixed* unit." alt="" coords="584,4,764,27"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="210,4,333,27"/>
+<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,173,27"/>
+</map>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.Float_Quantity">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Float_Quantity</tt><a class="headerlink" href="#quantity.quantity.Float_Quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A real number in particular units. Quantity sub-classes override <cite>units</cite> and <cite>__str__</cite>.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-0a84c5a0c48c0517d60788686575c7e32275c93a.png" alt="Inheritance diagram of Float_Quantity" usemap="#inheritance5e3a44f4a9" class="inheritance"/>
+<map id="inheritance5e3a44f4a9" name="inheritance5e3a44f4a9">
+<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="478,5,706,35"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="272,5,430,35"/>
+<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="6,5,223,35"/>
+</map>
+</p>
+<dl class="attribute">
+<dt id="quantity.quantity.Float_Quantity.toWords">
+<tt class="descname">toWords</tt><em class="property"> None</em><a class="headerlink" href="#quantity.quantity.Float_Quantity.toWords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number spelt out as words (e.g. <em>eleven</em> or <em>one hundred twenty three</em>).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.FormatSpecs">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">FormatSpecs</tt><a class="headerlink" href="#quantity.quantity.FormatSpecs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mixin class to extend the Format Specification mini-language.</p>
+<dl class="attribute">
+<dt id="quantity.quantity.FormatSpecs.div_format">
+<tt class="descname">div_format</tt><em class="property"> None</em><a class="headerlink" href="#quantity.quantity.FormatSpecs.div_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a nice representation when dividing by a Quantity (overridden in Fractional_Quantity).</p>
+<p>See <a class="reference internal" href="#quantity.quantity.Fractional_Quantity" title="quantity.quantity.Fractional_Quantity"><tt class="xref py py-class docutils literal"><span class="pre">Fractional_Quantity</span></tt></a> for a nice fractional representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.format_b">
+<tt class="descname">format_b</tt><big>(</big><em>value</em>, <em>spec</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.format_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format <cite>:b</cite> format displays it as blank when zero. e.g. <cite>0.00:b</cite> -&gt; .</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.format_i">
+<tt class="descname">format_i</tt><big>(</big><em>value</em>, <em>spec</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.format_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format <cite>:i</cite> format displays it in integer format, if possible. e.g. <cite>5.00%:i</cite> -&gt; 5%.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.format_k">
+<tt class="descname">format_k</tt><big>(</big><em>value</em>, <em>spec</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.format_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a PayRate Rate, shortening $1,000&#8217;s to $k&#8217;s, e.g. $50,000pa -&gt; $50k.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.format_rate">
+<tt class="descname">format_rate</tt><big>(</big><em>value</em>, <em>spec</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.format_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Support a <em>/rate</em> format specification, i.e. <cite>{value:spec/rate}</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.parse_spec">
+<tt class="descname">parse_spec</tt><big>(</big><em>spec</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.parse_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drop the new format specs. They are only only processed when called explicitly from a Qty sub-class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.FormatSpecs.splitOff">
+<tt class="descname">splitOff</tt><big>(</big><em>spec</em>, <em>id</em><big>)</big><a class="headerlink" href="#quantity.quantity.FormatSpecs.splitOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the new format specifier <cite>id</cite> out from the format <cite>spec</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.Fractional_Quantity">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Fractional_Quantity</tt><big>(</big><em>num</em>, <em>den=1</em>, <em>preferred_denominator=None</em><big>)</big><a class="headerlink" href="#quantity.quantity.Fractional_Quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Fractional Quantity displays as a Fraction (e.g. 52/12).</p>
+<p>This is useful, for example, when converting months to weeks.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-58dee64fbbe9fe161ca70c3bb450ab34118e1297.png" alt="Inheritance diagram of Fractional_Quantity" usemap="#inheritanceff9d650ac8" class="inheritance"/>
+<map id="inheritanceff9d650ac8" name="inheritanceff9d650ac8">
+<area shape="rect" id="node1" title=".numerator and .denominator should be in lowest terms." alt="" coords="347,35,428,53"/>
+<area shape="rect" id="node3" title="This class implements rational numbers." alt="" coords="490,35,570,53"/>
+<area shape="rect" id="node2" title="To Complex, Real adds the operations that work on real numbers." alt="" coords="226,35,292,53"/>
+<area shape="rect" id="node8" href="#quantity.quantity.Fractional_Quantity" title="A Fractional Quantity displays as a Fraction (e.g. 52/12)." alt="" coords="607,19,765,37"/>
+<area shape="rect" id="node4" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="322,3,453,21"/>
+<area shape="rect" id="node7" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="482,3,578,21"/>
+<area shape="rect" id="node5" title="Complex defines the operations that work on the builtin complex type." alt="" coords="113,35,197,53"/>
+<area shape="rect" id="node6" title="All numbers inherit from this class." alt="" coords="3,35,84,53"/>
+</map>
+</p>
+<dl class="attribute">
+<dt id="quantity.quantity.Fractional_Quantity.div_format">
+<tt class="descname">div_format</tt><em class="property"> None</em><a class="headerlink" href="#quantity.quantity.Fractional_Quantity.div_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a nice representation when dividing by a Fraction, e.g. /(52/12) -&gt; *12/52.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="quantity.quantity.Fractional_Quantity.preferred_repr">
+<tt class="descname">preferred_repr</tt><big>(</big><big>)</big><a class="headerlink" href="#quantity.quantity.Fractional_Quantity.preferred_repr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fractions can be displayed with a preferred_demonimator, for convenience.
+This is instead of the standard python <cite>limit_denominator</cite> which uses the lowest possible denominator.
+e.g. 52 weeks / 12 months can be displayed as 52/12 rather than 13/3.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.Percent_Quantity">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Percent_Quantity</tt><a class="headerlink" href="#quantity.quantity.Percent_Quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A percentage. Transparently handles a divisor of 100.
+(e.g. <cite>Percent(5)</cite> is displayed as 5% and stored as 0.05).</p>
+<p class="graphviz">
+<img src="../_images/inheritance-a8729ccde65b7fb6d703296e0105821d12b2b63d.png" alt="Inheritance diagram of Percent_Quantity" usemap="#inheritance8f849d0268" class="inheritance"/>
+<map id="inheritance8f849d0268" name="inheritance8f849d0268">
+<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="365,4,540,27"/>
+<area shape="rect" id="node4" href="#quantity.quantity.Percent_Quantity" title="A percentage. Transparently handles a divisor of 100." alt="" coords="577,4,764,27"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="208,4,328,27"/>
+<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,171,27"/>
+</map>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.Qty">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Qty</tt><a class="headerlink" href="#quantity.quantity.Qty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Qty is a base class for objects with a value represented by some Units.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-3b16b52cc54019aaa10c9f73bad959c8dd40b8e3.png" alt="Inheritance diagram of Qty" usemap="#inheritance4f25ba9221" class="inheritance"/>
+<map id="inheritance4f25ba9221" name="inheritance4f25ba9221">
+<area shape="rect" id="node1" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="6,5,223,35"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="272,5,430,35"/>
+</map>
+</p>
+<dl class="method">
+<dt id="quantity.quantity.Qty.conversion">
+<tt class="descname">conversion</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#quantity.quantity.Qty.conversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describe a conversion, e.g. <cite>{num:&gt;10/hr}.format(10*dollars)</cite> -&gt; $10.00/hr.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="quantity.quantity.Qty.formatUnits">
+<tt class="descname">formatUnits</tt><em class="property"> None</em><a class="headerlink" href="#quantity.quantity.Qty.formatUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the formatted Units part only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="quantity.quantity.Qty.formatValue">
+<tt class="descname">formatValue</tt><em class="property"> None</em><a class="headerlink" href="#quantity.quantity.Qty.formatValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the formatted Quantity (value part only).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="quantity.quantity.Qty.units">
+<tt class="descname">units</tt><em class="property"> = Unit()</em><a class="headerlink" href="#quantity.quantity.Qty.units" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the units.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="quantity.quantity.Unit">
+<em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Unit</tt><big>(</big><em>unit</em>, <em>symbol=Null</em>, <em>converter=Null</em><big>)</big><a class="headerlink" href="#quantity.quantity.Unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unit is a base class that represents a unit for a Quantity.</p>
+<dl class="docutils">
+<dt><cite>unit</cite></dt>
+<dd>The name of this Unit (a string).</dd>
+<dt><cite>symbol</cite></dt>
+<dd>A symbol that can be used in place of the unit (e.g. the symbol for &#8216;dollars&#8217; is &#8216;$&#8217;)</dd>
+<dt><cite>converter</cite></dt>
+<dd>A converter class that knows how to convert between different units.</dd>
+</dl>
+<dl class="method">
+<dt id="quantity.quantity.Unit.units">
+<tt class="descname">units</tt><big>(</big><em>number</em><big>)</big><a class="headerlink" href="#quantity.quantity.Unit.units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unit name formatted as a String. (<strong>Note:</strong> This handles plural forms).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="quantity.quantity.percent">
+<tt class="descclassname">quantity.quantity.</tt><tt class="descname">percent</tt><em class="property"> = Percent_Quantity(1.0%)</em><a class="headerlink" href="#quantity.quantity.percent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Usage: e.g. <cite>rate = 5 * percent</cite></p>
+</dd></dl>
+
+<dl class="data">
+<dt id="quantity.quantity.qty">
+<tt class="descclassname">quantity.quantity.</tt><tt class="descname">qty</tt><em class="property"> = Fixed_Quantity(1.0)</em><a class="headerlink" href="#quantity.quantity.qty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Usage: e.g. <cite>pieces = 40*qty</cite></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Quantity</a><ul>
+<li><a class="reference internal" href="#id1">Quantity</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../point/index.html"
+                        title="previous chapter">Point</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../registered/index.html"
+                        title="next chapter">Registered</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/quantity/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../registered/index.html" title="Registered"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../point/index.html" title="Point"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

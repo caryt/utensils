@@ -1,0 +1,6 @@
+<map id="inheritance8f849d0268" name="inheritance8f849d0268">
+<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="365,4,540,27"/>
+<area shape="rect" id="node4" href="#quantity.quantity.Percent_Quantity" title="A percentage. Transparently handles a divisor of 100." alt="" coords="577,4,764,27"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="208,4,328,27"/>
+<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,171,27"/>
+</map>

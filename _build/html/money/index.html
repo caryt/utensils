@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Money &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Null" href="../null/index.html" />
+    <link rel="prev" title="Lookup" href="../lookup/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../null/index.html" title="Null"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../lookup/index.html" title="Lookup"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-money">
+<span id="money"></span><h1>Money<a class="headerlink" href="#module-money" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-money.money"></span><div class="section" id="id1">
+<h2>Money<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p class="graphviz">
+<img src="../_images/inheritance-8fe249aec35a5636e372a6937011e329e8dd1ed9.png" alt="Inheritance diagram of Currency" usemap="#inheritance171150c7f7" class="inheritance"/>
+<map id="inheritance171150c7f7" name="inheritance171150c7f7">
+<area shape="rect" id="node1" href="../quantity/index.html#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="393,4,581,29"/>
+<area shape="rect" id="node4" href="#money.money.Currency" title="Currency is a :class:`.Float_Quantity` with units of `Money` and a currency symbol. sub&#45;Classed to a specific currency." alt="" coords="621,4,764,29"/>
+<area shape="rect" id="node2" href="../quantity/index.html#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="224,4,354,29"/>
+<area shape="rect" id="node3" href="../quantity/index.html#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,184,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="money.money.Cents">
+<em class="property">class </em><tt class="descclassname">money.money.</tt><tt class="descname">Cents</tt><a class="headerlink" href="#money.money.Cents" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Currency for cents only, displayed as, e.g. <em>5c</em>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="money.money.Currency">
+<em class="property">class </em><tt class="descclassname">money.money.</tt><tt class="descname">Currency</tt><a class="headerlink" href="#money.money.Currency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Currency is a <a class="reference internal" href="../quantity/index.html#quantity.quantity.Float_Quantity" title="quantity.quantity.Float_Quantity"><tt class="xref py py-class docutils literal"><span class="pre">Float_Quantity</span></tt></a> with units of <cite>Money</cite> and a currency symbol. sub-Classed to a specific currency.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="money.money.Dollars">
+<em class="property">class </em><tt class="descclassname">money.money.</tt><tt class="descname">Dollars</tt><a class="headerlink" href="#money.money.Dollars" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Currency in dollars and cents.</p>
+<dl class="attribute">
+<dt id="money.money.Dollars.asCents">
+<tt class="descname">asCents</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.asCents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the amount as an integer number of cents.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="money.money.Dollars.cents">
+<tt class="descname">cents</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.cents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cents only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="money.money.Dollars.dollars">
+<tt class="descname">dollars</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.dollars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dollars only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="money.money.Dollars.round_cents">
+<tt class="descname">round_cents</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.round_cents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the amount, rounded to the nearest cent.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="money.money.Dollars.round_dollars">
+<tt class="descname">round_dollars</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.round_dollars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dollars only, rounded to the nearest dollar.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="money.money.Dollars.toWords">
+<tt class="descname">toWords</tt><em class="property"> None</em><a class="headerlink" href="#money.money.Dollars.toWords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dollars value spelt out in words as <em>x dollars and y cents</em>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Money</a><ul>
+<li><a class="reference internal" href="#id1">Money</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../lookup/index.html"
+                        title="previous chapter">Lookup</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../null/index.html"
+                        title="next chapter">Null</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/money/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../null/index.html" title="Null"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../lookup/index.html" title="Lookup"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

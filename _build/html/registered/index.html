@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Registered &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Sphinx Utensils" href="../sphinxutensils/index.html" />
+    <link rel="prev" title="Quantity" href="../quantity/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../sphinxutensils/index.html" title="Sphinx Utensils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../quantity/index.html" title="Quantity"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-registered">
+<span id="registered"></span><h1>Registered<a class="headerlink" href="#module-registered" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-registered.registered"></span><div class="section" id="id1">
+<h2>Registered<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="registered.registered.Registered">
+<em class="property">class </em><tt class="descclassname">registered.registered.</tt><tt class="descname">Registered</tt><big>(</big><em>name</em>, <em>bases</em>, <em>dct</em><big>)</big><a class="headerlink" href="#registered.registered.Registered" title="Permalink to this definition">¶</a></dt>
+<dd><p>A meta-class for classes that keep a Registry of their sub-classes.
+This allows the creation of subclasses by name. E.g.:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">class BaseClass(object):</div>
+<div class="line-block">
+<div class="line">__metaclass__ = Registered</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">class SubClass1(BaseClass): pass</div>
+<div class="line">class SubClass2(BaseClass): pass</div>
+<div class="line"><br /></div>
+<div class="line">BaseClass[&#8216;SubClass1&#8217;]</div>
+</div>
+</div></blockquote>
+<p>A Registered class can also be iterated over for all its
+Registered subclasses, Usage:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">for subclass in cls</div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Registered</a><ul>
+<li><a class="reference internal" href="#id1">Registered</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../quantity/index.html"
+                        title="previous chapter">Quantity</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../sphinxutensils/index.html"
+                        title="next chapter">Sphinx Utensils</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/registered/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../sphinxutensils/index.html" title="Sphinx Utensils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../quantity/index.html" title="Quantity"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

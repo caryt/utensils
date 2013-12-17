@@ -1,0 +1,10 @@
+<map id="inheritanceff9d650ac8" name="inheritanceff9d650ac8">
+<area shape="rect" id="node1" title=".numerator and .denominator should be in lowest terms." alt="" coords="347,35,428,53"/>
+<area shape="rect" id="node3" title="This class implements rational numbers." alt="" coords="490,35,570,53"/>
+<area shape="rect" id="node2" title="To Complex, Real adds the operations that work on real numbers." alt="" coords="226,35,292,53"/>
+<area shape="rect" id="node8" href="#quantity.quantity.Fractional_Quantity" title="A Fractional Quantity displays as a Fraction (e.g. 52/12)." alt="" coords="607,19,765,37"/>
+<area shape="rect" id="node4" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="322,3,453,21"/>
+<area shape="rect" id="node7" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="482,3,578,21"/>
+<area shape="rect" id="node5" title="Complex defines the operations that work on the builtin complex type." alt="" coords="113,35,197,53"/>
+<area shape="rect" id="node6" title="All numbers inherit from this class." alt="" coords="3,35,84,53"/>
+</map>

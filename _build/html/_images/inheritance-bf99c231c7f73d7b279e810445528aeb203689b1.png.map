@@ -1,0 +1,5 @@
+<map id="inheritance1365f3bb07" name="inheritance1365f3bb07">
+<area shape="rect" id="node1" href="#date.date.Interval" title="An Interval representing a list from start to end, [start..end]." alt="" coords="6,5,140,35"/>
+<area shape="rect" id="node2" href="#date.date.DateInterval" title="A Date Interval" alt="" coords="190,5,354,35"/>
+<area shape="rect" id="node3" href="#date.date.Week" title="A Week." alt="" coords="403,5,523,35"/>
+</map>

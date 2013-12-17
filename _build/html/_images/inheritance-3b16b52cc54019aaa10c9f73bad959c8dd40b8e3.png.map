@@ -1,0 +1,4 @@
+<map id="inheritance4f25ba9221" name="inheritance4f25ba9221">
+<area shape="rect" id="node1" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="6,5,223,35"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="272,5,430,35"/>
+</map>

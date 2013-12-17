@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Point &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Quantity" href="../quantity/index.html" />
+    <link rel="prev" title="Plural" href="../plural/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../quantity/index.html" title="Quantity"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../plural/index.html" title="Plural"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-point">
+<span id="point"></span><h1>Point<a class="headerlink" href="#module-point" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-point.point"></span><div class="section" id="points-angles-and-geographical-coordinates">
+<h2>Points, Angles and Geographical Coordinates<a class="headerlink" href="#points-angles-and-geographical-coordinates" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="point.point.Angle">
+<em class="property">class </em><tt class="descclassname">point.point.</tt><tt class="descname">Angle</tt><a class="headerlink" href="#point.point.Angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Angle (in degrees) - a float with some extra methods.</p>
+<dl class="attribute">
+<dt id="point.point.Angle.cos">
+<tt class="descname">cos</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.cos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cosine of the Angle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Angle.degrees">
+<tt class="descname">degrees</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.degrees" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the whole number of Degrees in the Angle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Angle.minutes">
+<tt class="descname">minutes</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.minutes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the whole number of Minutes in the Angle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Angle.radians">
+<tt class="descname">radians</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.radians" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Angle in Radians.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Angle.seconds">
+<tt class="descname">seconds</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of Seconds in the Angle.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Angle.sin">
+<tt class="descname">sin</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Angle.sin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the sine of the Angle.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="point.point.Coordinate">
+<em class="property">class </em><tt class="descclassname">point.point.</tt><tt class="descname">Coordinate</tt><a class="headerlink" href="#point.point.Coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geographical Coordinate (Latitude, Longitude and Elevation).</p>
+<dl class="attribute">
+<dt id="point.point.Coordinate.elevation">
+<tt class="descname">elevation</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Coordinate.elevation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Elevation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Coordinate.latitude">
+<tt class="descname">latitude</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Coordinate.latitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Latitude.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Coordinate.longitude">
+<tt class="descname">longitude</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Coordinate.longitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Longitude.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="point.point.Coordinate.northern">
+<tt class="descname">northern</tt><em class="property"> None</em><a class="headerlink" href="#point.point.Coordinate.northern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is in the northern hemisphere.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="point.point.Point">
+<em class="property">class </em><tt class="descclassname">point.point.</tt><tt class="descname">Point</tt><a class="headerlink" href="#point.point.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point in space (x, y, z).</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Point</a><ul>
+<li><a class="reference internal" href="#points-angles-and-geographical-coordinates">Points, Angles and Geographical Coordinates</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../plural/index.html"
+                        title="previous chapter">Plural</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../quantity/index.html"
+                        title="next chapter">Quantity</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/point/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../quantity/index.html" title="Quantity"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../plural/index.html" title="Plural"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

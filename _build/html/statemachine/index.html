@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>State Machine &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Stats" href="../stats/index.html" />
+    <link rel="prev" title="Sphinx Utensils" href="../sphinxutensils/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../stats/index.html" title="Stats"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../sphinxutensils/index.html" title="Sphinx Utensils"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-statemachine">
+<span id="state-machine"></span><h1>State Machine<a class="headerlink" href="#module-statemachine" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-statemachine.statemachine"></span><div class="section" id="id1">
+<h2>State Machine<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p class="graphviz">
+<img src="../_images/inheritance-d5366ee45a4dfaad302859d11e76e61363f1377b.png" alt="Inheritance diagram of StateMachine" usemap="#inheritance3c084d47df" class="inheritance"/>
+<map id="inheritance3c084d47df" name="inheritance3c084d47df">
+<area shape="rect" id="node1" href="#statemachine.statemachine.StateMachine" title="A StateMachine is an object that can be in one of a number of different :class:`.State`&#39;s&#39;." alt="" coords="6,5,292,35"/>
+</map>
+</p>
+<dl class="class">
+<dt id="statemachine.statemachine.MetaState">
+<em class="property">class </em><tt class="descclassname">statemachine.statemachine.</tt><tt class="descname">MetaState</tt><a class="headerlink" href="#statemachine.statemachine.MetaState" title="Permalink to this definition">¶</a></dt>
+<dd><p>The meta-class for State. Since State <strong>classes</strong> as used, some operations on those classes are defined here.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="statemachine.statemachine.State">
+<em class="property">class </em><tt class="descclassname">statemachine.statemachine.</tt><tt class="descname">State</tt><big>(</big><em>machine</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.State" title="Permalink to this definition">¶</a></dt>
+<dd><p>A State class represents the current state of a <a class="reference internal" href="#statemachine.statemachine.StateMachine" title="statemachine.statemachine.StateMachine"><tt class="xref py py-class docutils literal"><span class="pre">StateMachine</span></tt></a>.</p>
+<p>States have:-</p>
+<ul class="simple">
+<li>a <cite>moveTo</cite> set which contains the States we can transitionto.</li>
+<li>or <cite>moveTo</cite> can be a dictionary of states with a transition method that is called when moving to the new state.</li>
+<li>an <cite>__init__</cite> method which performs the processing required when moving to this new state.</li>
+</ul>
+<dl class="attribute">
+<dt id="statemachine.statemachine.State.an">
+<tt class="descname">an</tt><em class="property"> None</em><a class="headerlink" href="#statemachine.statemachine.State.an" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a/an depending on the state.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="statemachine.statemachine.State.movesTo">
+<tt class="descname">movesTo</tt><em class="property"> = {}</em><a class="headerlink" href="#statemachine.statemachine.State.movesTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dictionary of State Transitions {NewState: transition_method}.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="statemachine.statemachine.State.transition">
+<tt class="descname">transition</tt><big>(</big><em>machine</em>, <em>newState</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.State.transition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move <cite>machine</cite> to <cite>newState</cite>:</p>
+<ol class="arabic simple">
+<li>Check that the new state is a valid transition from this state.</li>
+<li>Set the new state.</li>
+<li>Call the transition method (if present).</li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="statemachine.statemachine.StateError">
+<em class="property">exception </em><tt class="descclassname">statemachine.statemachine.</tt><tt class="descname">StateError</tt><a class="headerlink" href="#statemachine.statemachine.StateError" title="Permalink to this definition">¶</a></dt>
+<dd><p>A StateException is raised when an operation is attempted on a StateMachine when it is in an inappropriate State.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="statemachine.statemachine.StateMachine">
+<em class="property">class </em><tt class="descclassname">statemachine.statemachine.</tt><tt class="descname">StateMachine</tt><big>(</big><em>InitialState</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>A StateMachine is an object that can be in one of a number of different <a class="reference internal" href="#statemachine.statemachine.State" title="statemachine.statemachine.State"><tt class="xref py py-class docutils literal"><span class="pre">State</span></tt></a>&#8216;s&#8217;.</p>
+<p>Setting the <cite>state</cite> checks whether the transition is allowed and moves the StateMachine into the new state -
+performing any required processing on the transition.
+A <cite>StateError</cite> is raised if the transition is not allowed.</p>
+<dl class="method">
+<dt id="statemachine.statemachine.StateMachine.assertInState">
+<tt class="descname">assertInState</tt><big>(</big><em>State</em>, <em>message=None</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.assertInState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise a StateError if StateMachine is not in <cite>State</cite> (a class, or a list of State classes).</p>
+<p>message is passed with the exception. It can contain &#8220;a{n} {state}&#8221;&#8221; which will be replaced by the current state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="statemachine.statemachine.StateMachine.can">
+<tt class="descname">can</tt><big>(</big><em>stateName</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.can" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if machine can moveTo <cite>stateName</cite>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="statemachine.statemachine.StateMachine.edgeLabel">
+<em class="property">classmethod </em><tt class="descname">edgeLabel</tt><big>(</big><em>From</em>, <em>To</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.edgeLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a named label for a state transition. (Only applicable if the transition has an associated method).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="statemachine.statemachine.StateMachine.goto">
+<tt class="descname">goto</tt><big>(</big><em>newState</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.goto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transition to the <cite>newState</cite> state (a class).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="statemachine.statemachine.StateMachine.inState">
+<tt class="descname">inState</tt><big>(</big><em>State</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.inState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True is machine is in <cite>State</cite> (a class, or a list of State classes).</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="statemachine.statemachine.StateMachine.transitionLabel">
+<em class="property">classmethod </em><tt class="descname">transitionLabel</tt><big>(</big><em>From</em>, <em>To</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.transitionLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a description for a State Transition.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="statemachine.statemachine.StateMachine.transitioned">
+<tt class="descname">transitioned</tt><big>(</big><em>oldState</em>, <em>newState</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.transitioned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called after machine moves from <cite>oldSate</cite> to <cite>newState</cite>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="statemachine.statemachine.StateMachine.transitionsGraph">
+<em class="property">classmethod </em><tt class="descname">transitionsGraph</tt><big>(</big><em>states</em><big>)</big><a class="headerlink" href="#statemachine.statemachine.StateMachine.transitionsGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edges for a graph (graphviz format) documenting all State Transitions.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">State Machine</a><ul>
+<li><a class="reference internal" href="#id1">State Machine</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../sphinxutensils/index.html"
+                        title="previous chapter">Sphinx Utensils</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../stats/index.html"
+                        title="next chapter">Stats</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/statemachine/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../stats/index.html" title="Stats"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../sphinxutensils/index.html" title="Sphinx Utensils"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

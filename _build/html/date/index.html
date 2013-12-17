@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Date &mdash; Python Utensils 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Lookup" href="../lookup/index.html" />
+    <link rel="prev" title="CLI" href="../application/index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../lookup/index.html" title="Lookup"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../application/index.html" title="CLI"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-date">
+<span id="date"></span><h1>Date<a class="headerlink" href="#module-date" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-date.date"></span><div class="section" id="id1">
+<h2>Date<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="date.date.Date">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Date</tt><big>(</big><em>y</em>, <em>m=None</em>, <em>d=None</em><big>)</big><a class="headerlink" href="#date.date.Date" title="Permalink to this definition">¶</a></dt>
+<dd><p>An idealised date (year, month, day).</p>
+<p class="graphviz">
+<img src="../_images/inheritance-c14edd5d573c60c8e6c8b48e305e4b696a10d395.png" alt="Inheritance diagram of Date" usemap="#inheritancef5beffa4f2" class="inheritance"/>
+<map id="inheritancef5beffa4f2" name="inheritancef5beffa4f2">
+<area shape="rect" id="node1" href="#date.date.Date" title="An idealised date (year, month, day)." alt="" coords="6,5,122,35"/>
+</map>
+</p>
+<p>d = Date(2013,Jan,1) returns a date representing 1-Jan-2013
+Date Literals are supported in program source too, e.g. 1-Jan-2013 (!)
+d.year  returns a Date object representing the Year (e.g. 2013)
+d.month returns a Date object representing the month and Year (e.g. Jan-2013)
+d.day   returns a Date object representing the date, i.e. itself (e.g. 1-Jan-2013)
+d.weekday, d.week, d.ymd, d.inLeapYear()
+int(d) returns the Julian day number, Date(n) returns a Date from julian day number n</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.DateInterval">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">DateInterval</tt><big>(</big><em>start</em>, <em>end</em><big>)</big><a class="headerlink" href="#date.date.DateInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Date Interval</p>
+<p class="graphviz">
+<img src="../_images/inheritance-20d532b28642348ff90308332d87d32ce5863517.png" alt="Inheritance diagram of DateInterval" usemap="#inheritance2be1eaf60f" class="inheritance"/>
+<map id="inheritance2be1eaf60f" name="inheritance2be1eaf60f">
+<area shape="rect" id="node1" href="#date.date.DateInterval" title="A Date Interval" alt="" coords="190,5,354,35"/>
+<area shape="rect" id="node2" href="#date.date.Interval" title="An Interval representing a list from start to end, [start..end]." alt="" coords="6,5,140,35"/>
+</map>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Duration">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Duration</tt><big>(</big><em>y</em>, <em>m</em>, <em>d</em><big>)</big><a class="headerlink" href="#date.date.Duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a duration (days, months and years).</p>
+<p>Add / Subtract durations from Dates, e.g. 1-Jan-2013 + 3*years + 2*months + 15*days</p>
+<dl class="attribute">
+<dt id="date.date.Duration.months">
+<tt class="descname">months</tt><em class="property"> None</em><a class="headerlink" href="#date.date.Duration.months" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the total number of years and months, in whole months (ignoring any days).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Interval">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Interval</tt><big>(</big><em>start</em>, <em>end</em><big>)</big><a class="headerlink" href="#date.date.Interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Interval representing a list from start to end, [start..end].</p>
+<p class="graphviz">
+<img src="../_images/inheritance-ba2d830e9f9d5841f79fb7d9b22c310736b2975c.png" alt="Inheritance diagram of Interval" usemap="#inheritance1cdcb07105" class="inheritance"/>
+<map id="inheritance1cdcb07105" name="inheritance1cdcb07105">
+<area shape="rect" id="node1" href="#date.date.Interval" title="An Interval representing a list from start to end, [start..end]." alt="" coords="6,5,140,35"/>
+</map>
+</p>
+<p>Suitable base class for Date Intervals
+i = Interval(start,end) returns the Interval starting at start and continuing to end (inclusive)
+Usage examples: i[0], i[-1], len(i), for x in i, x in i.
+Requires definitions for i+1, i&lt;=j, i-j
+Note that either start or end may be None, indicating an open interval.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Month">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Month</tt><big>(</big><em>y</em>, <em>m</em>, <em>d=0</em><big>)</big><a class="headerlink" href="#date.date.Month" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Date object representing just a Month and, optionally, a Year.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-cb6ae4fba9e20a35d30b0a03f038b1203d20c66b.png" alt="Inheritance diagram of Month" usemap="#inheritance2896c88e75" class="inheritance"/>
+<map id="inheritance2896c88e75" name="inheritance2896c88e75">
+<area shape="rect" id="node1" href="#date.date.Date" title="An idealised date (year, month, day)." alt="" coords="6,5,122,35"/>
+<area shape="rect" id="node2" href="#date.date.Month" title="A Date object representing just a Month and, optionally, a Year." alt="" coords="171,5,298,35"/>
+</map>
+</p>
+<p>List operations, e.g. Jan-2013[1], [-1], for d in Jan-2013, len(Jan-2013)
+29 in Feb-2013</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Week">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Week</tt><big>(</big><em>start</em><big>)</big><a class="headerlink" href="#date.date.Week" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Week.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-bf99c231c7f73d7b279e810445528aeb203689b1.png" alt="Inheritance diagram of Week" usemap="#inheritance1365f3bb07" class="inheritance"/>
+<map id="inheritance1365f3bb07" name="inheritance1365f3bb07">
+<area shape="rect" id="node1" href="#date.date.Interval" title="An Interval representing a list from start to end, [start..end]." alt="" coords="6,5,140,35"/>
+<area shape="rect" id="node2" href="#date.date.DateInterval" title="A Date Interval" alt="" coords="190,5,354,35"/>
+<area shape="rect" id="node3" href="#date.date.Week" title="A Week." alt="" coords="403,5,523,35"/>
+</map>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Weekday">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Weekday</tt><a class="headerlink" href="#date.date.Weekday" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumerated type for days of the week (Sun..Sat)</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="date.date.Year">
+<em class="property">class </em><tt class="descclassname">date.date.</tt><tt class="descname">Year</tt><big>(</big><em>y</em><big>)</big><a class="headerlink" href="#date.date.Year" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Date object representing just a Year.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-f6bed0808dd1b02e6c9f038593567d6e7ba371f6.png" alt="Inheritance diagram of Year" usemap="#inheritanceda7a9e0bb9" class="inheritance"/>
+<map id="inheritanceda7a9e0bb9" name="inheritanceda7a9e0bb9">
+<area shape="rect" id="node1" href="#date.date.Year" title="A Date object representing just a Year." alt="" coords="171,5,285,35"/>
+<area shape="rect" id="node2" href="#date.date.Date" title="An idealised date (year, month, day)." alt="" coords="6,5,122,35"/>
+</map>
+</p>
+<p>List operations, e.g. for d in Year(2013), len(Year(2013)</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-date.dateparser"></span><p>Copyright (c) 2003-2007  Gustavo Niemeyer &lt;<a class="reference external" href="mailto:gustavo&#37;&#52;&#48;niemeyer&#46;net">gustavo<span>&#64;</span>niemeyer<span>&#46;</span>net</a>&gt;</p>
+<p>This module offers extensions to the standard python 2.3+
+datetime module.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Date</a><ul>
+<li><a class="reference internal" href="#id1">Date</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../application/index.html"
+                        title="previous chapter">CLI</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../lookup/index.html"
+                        title="next chapter">Lookup</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/date/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../lookup/index.html" title="Lookup"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../application/index.html" title="CLI"
+             >previous</a> |</li>
+        <li><a href="../index.html">Python Utensils 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Cary Thomson.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>
