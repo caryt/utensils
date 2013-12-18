@@ -2,13 +2,10 @@
 =======
 """
 #TODO - dayfirst should be in Locale
-from dateparser 				import parse
+from classproperty import classproperty
+from dateparser import parse
+from plural import plural
 import time
-
-
-class classproperty(property):
-	def __get__(self, cls, owner):
-		return self.fget.__get__(None, owner)()
 
 
 class Weekday(int):
@@ -203,9 +200,9 @@ class Duration(Date):
 	def __init__(self, y, m, d): 	self.ymd = (y+int(m/12), m%12, d)
 
 	def __str__(self):
-		days 						= '%d %s ' % (self.d, _.plural(self.d, 'day'))   if self.d else ''
-		months 						= '%d %s ' % (self.m, _.plural(self.m, 'month')) if self.m else ''
-		years  						= '%d %s ' % (self.y, _.plural(self.y, 'year'))  if self.y else ''
+		days 						= '%d %s ' % (self.d, plural   (self.d, 'day'))   if self.d else ''
+		months 						= '%d %s ' % (self.m, plural   (self.m, 'month')) if self.m else ''
+		years  						= '%d %s ' % (self.y, plural   (self.y, 'year'))  if self.y else ''
 		return ('%s%s%s' % (years, months, days)).strip()
 
 	def __len__(self): 				return 'Not implemented'
@@ -301,12 +298,12 @@ class DateInterval(Interval):
 	@property
 	def duration(self):
 		if not hasattr(self, '_duration'):
-			overflow_m					= (self._start.m > self._end.m)
-			yy 							= self._end.y - self._start.y - ( 1 if overflow_m else 0)
-			mm 							= self._end.m - self._start.m + (12 if overflow_m else 0)
-			overflow_d					= (self._start.d > self._end.d)
-			mm 							= mm - (1 if overflow_d else 0)
-			dd 							= self._end.d - self._start.d + (len((self._end.month[1]-1).month) if overflow_d else 0)
+			overflow_m	   = (self._start.m > self._end.m)
+			yy 			   = self._end.y - self._start.y - ( 1 if overflow_m else 0)
+			mm 			   = self._end.m - self._start.m + (12 if overflow_m else 0)
+			overflow_d	   = (self._start.d > self._end.d)
+			mm 			   = mm - (1 if overflow_d else 0)
+			dd 			   = self._end.d - self._start.d + (len((self._end.month[1]-1).month) if overflow_d else 0)
 			self._duration = Duration(	yy, mm, dd)
 		return self._duration
 	@property

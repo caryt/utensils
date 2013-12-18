@@ -24,6 +24,7 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Python Utensils 0.1 documentation" href="../index.html" />
+    <link rel="next" title="URI" href="../uri/index.html" />
     <link rel="prev" title="Stats" href="../stats/index.html" /> 
   </head>
   <body>
@@ -36,6 +37,9 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="../uri/index.html" title="URI"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../stats/index.html" title="Stats"
              accesskey="P">previous</a> |</li>
@@ -50,24 +54,30 @@
             
   <div class="section" id="module-testing">
 <span id="testing"></span><h1>Testing<a class="headerlink" href="#module-testing" title="Permalink to this headline">¶</a></h1>
-<span class="target" id="module-testing.multipletests"></span><div class="section" id="testing-utilities">
-<h2>Testing Utilities<a class="headerlink" href="#testing-utilities" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-testing.testing"></span><div class="section" id="testing-utensils">
+<h2>Testing Utensils<a class="headerlink" href="#testing-utensils" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="testing.multipletests.MultipleTests">
-<em class="property">class </em><tt class="descclassname">testing.multipletests.</tt><tt class="descname">MultipleTests</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#testing.multipletests.MultipleTests" title="Permalink to this definition">¶</a></dt>
+<dt id="testing.testing.MultipleTests">
+<em class="property">class </em><tt class="descclassname">testing.testing.</tt><tt class="descname">MultipleTests</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#testing.testing.MultipleTests" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Test Case that can automatically generate a number of Tests.</p>
 <dl class="classmethod">
-<dt id="testing.multipletests.MultipleTests.fn_name">
-<em class="property">classmethod </em><tt class="descname">fn_name</tt><big>(</big><em>check_fn</em>, <em>args</em>, <em>result</em><big>)</big><a class="headerlink" href="#testing.multipletests.MultipleTests.fn_name" title="Permalink to this definition">¶</a></dt>
+<dt id="testing.testing.MultipleTests.fn_name">
+<em class="property">classmethod </em><tt class="descname">fn_name</tt><big>(</big><em>check_fn</em>, <em>args</em>, <em>result</em><big>)</big><a class="headerlink" href="#testing.testing.MultipleTests.fn_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a name for the check_fn for an individual test. (NB: must start with &#8220;test&#8221;).</p>
 </dd></dl>
 
 <dl class="classmethod">
-<dt id="testing.multipletests.MultipleTests.generate_test">
-<em class="property">classmethod </em><tt class="descname">generate_test</tt><big>(</big><em>check_fn</em>, <em>args</em>, <em>result</em><big>)</big><a class="headerlink" href="#testing.multipletests.MultipleTests.generate_test" title="Permalink to this definition">¶</a></dt>
+<dt id="testing.testing.MultipleTests.generate_test">
+<em class="property">classmethod </em><tt class="descname">generate_test</tt><big>(</big><em>check_fn</em>, <em>args</em>, <em>result</em><big>)</big><a class="headerlink" href="#testing.testing.MultipleTests.generate_test" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate an individual test, and add it to this TestCase.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="testing.testing.run_tests">
+<tt class="descclassname">testing.testing.</tt><tt class="descname">run_tests</tt><big>(</big><em>self</em>, <em>arg</em><big>)</big><a class="headerlink" href="#testing.testing.run_tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the Test Suite (-t 2 for verbose, &#8211;quick to skip slow tests).</p>
 </dd></dl>
 
 </div>
@@ -82,7 +92,7 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Testing</a><ul>
-<li><a class="reference internal" href="#testing-utilities">Testing Utilities</a></li>
+<li><a class="reference internal" href="#testing-utensils">Testing Utensils</a></li>
 </ul>
 </li>
 </ul>
@@ -90,6 +100,9 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="../stats/index.html"
                         title="previous chapter">Stats</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../uri/index.html"
+                        title="next chapter">URI</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/testing/index.txt"
@@ -121,6 +134,9 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="../uri/index.html" title="URI"
+             >next</a> |</li>
         <li class="right" >
           <a href="../stats/index.html" title="Stats"
              >previous</a> |</li>

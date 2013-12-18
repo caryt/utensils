@@ -7,7 +7,9 @@ CLI
     :members:
 .. automodule:: application.config
     :members:
-.. automodule:: application.db
+.. automodule:: application.crud
+    :members:
+.. automodule:: application.mongodb
     :members:
 .. automodule:: application.wsgi
     :members:

@@ -10,4 +10,4 @@ class TestSomething(TestCase):
 
     def test_test(self):
         """Test."""
-        self.assertEqual(1, 2)
+        self.assertEqual(1, 1)

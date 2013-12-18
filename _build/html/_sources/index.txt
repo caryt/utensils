@@ -37,6 +37,8 @@ Contents:
 
     testing - <testing/index>
 
+    uri - <uri/index>
+
 
 Indices and tables
 ==================

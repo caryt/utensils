@@ -3,5 +3,5 @@ Testing
 
 .. automodule:: testing
 
-.. automodule:: testing.multipletests
+.. automodule:: testing.testing
     :members:

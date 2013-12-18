@@ -3,9 +3,9 @@
 
 .. inheritance-diagram:: StateMachine
 """
-from null 								import Null
-from functools 							import partial
-
+from null import Null
+from functools import partial
+from plural import Plural
 
 class StateError(TypeError):
 	"""A StateException is raised when an operation is attempted on a StateMachine when it is in an inappropriate State."""
@@ -43,7 +43,7 @@ class State(object):
 	@property
 	def an(self):
 		"""Format a/an depending on the state."""
-		return _.Plural.indefinite(self)
+		return Plural.indefinite(self)
 
 	def transition(self, machine, newState):
 		"""Move `machine` to `newState`:

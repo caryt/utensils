@@ -56,41 +56,286 @@
 <span id="cli"></span><h1>CLI<a class="headerlink" href="#module-application" title="Permalink to this headline">¶</a></h1>
 <span class="target" id="module-application.cli"></span><div class="section" id="command-line-application">
 <h2>Command Line Application<a class="headerlink" href="#command-line-application" title="Permalink to this headline">¶</a></h2>
-<p class="graphviz">
-<img src="../_images/inheritance-9bfec257a0f81f0105ea6706839a022e7b64caa6.png" alt="Inheritance diagram of CommandLineApp" usemap="#inheritance8d38ce9e1d" class="inheritance"/>
-<map id="inheritance8d38ce9e1d" name="inheritance8d38ce9e1d">
-<area shape="rect" id="node1" href="#application.cli.CommandLineApp" title="An object that runs commands passed from an external invocation of the program." alt="" coords="5,5,240,35"/>
-</map>
-</p>
 <dl class="class">
-<dt id="application.cli.CommandLineApp">
-<em class="property">class </em><tt class="descclassname">application.cli.</tt><tt class="descname">CommandLineApp</tt><big>(</big><em>app=None</em><big>)</big><a class="headerlink" href="#application.cli.CommandLineApp" title="Permalink to this definition">¶</a></dt>
-<dd><p>An object that runs commands passed from an external invocation of the program.</p>
-<p>Command Line Options:</p>
-<div class="highlight-python"><pre>Command Line Application
-
-usage: run &lt;command&gt; [options]
-
-Commands:
-
--h --help	Display help message and usage.</pre>
-</div>
-<dl class="method">
-<dt id="application.cli.CommandLineApp.help">
-<tt class="descname">help</tt><big>(</big><em>opt=None</em><big>)</big><a class="headerlink" href="#application.cli.CommandLineApp.help" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display help message and usage.</p>
+<dt id="application.cli.CLI">
+<em class="property">class </em><tt class="descclassname">application.cli.</tt><tt class="descname">CLI</tt><a class="headerlink" href="#application.cli.CLI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper class to implement a Command Line Interface.</p>
+<dl class="classmethod">
+<dt id="application.cli.CLI.add">
+<em class="property">classmethod </em><tt class="descname">add</tt><big>(</big><em>cmds</em><big>)</big><a class="headerlink" href="#application.cli.CLI.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add to the list of commands.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="application.cli.CommandLineApp.open_file">
-<tt class="descname">open_file</tt><big>(</big><em>fname</em><big>)</big><a class="headerlink" href="#application.cli.CommandLineApp.open_file" title="Permalink to this definition">¶</a></dt>
+<dt id="application.cli.CLI.execute">
+<tt class="descname">execute</tt><big>(</big><em>cmd</em>, <em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLI.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call <cite>cmd</cite> passing <cite>arg</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="application.cli.CLIApplication">
+<em class="property">class </em><tt class="descclassname">application.cli.</tt><tt class="descname">CLIApplication</tt><a class="headerlink" href="#application.cli.CLIApplication" title="Permalink to this definition">¶</a></dt>
+<dd><p>An object that runs commands passed from an external invocation of the program.</p>
+<p>Command Line Options:</p>
+<div class="highlight-python"><pre>-b --build	Build the Sphinx Help Documentation (html or pdf).
+-h --help	Print help / usage message.
+-t --test	Run the Test Suite (-t 2 for verbose, --quick to skip slow tests).
+        </pre>
+</div>
+<dl class="method">
+<dt id="application.cli.CLIApplication.build_docs">
+<tt class="descname">build_docs</tt><big>(</big><em>format</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.build_docs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the Sphinx Help Documentation (html or pdf).</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="application.cli.CLIApplication.new_application">
+<em class="property">classmethod </em><tt class="descname">new_application</tt><big>(</big><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.new_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method can be subclassed to return a alternative application
+object when testing. (Useful for mocking).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.cli.CLIApplication.open_file">
+<tt class="descname">open_file</tt><big>(</big><em>fname</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.open_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open local file <cite>fname</cite> in a web browser.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="application.cli.CommandLineApp.shell">
-<tt class="descname">shell</tt><big>(</big><em>args</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=False</em><big>)</big><a class="headerlink" href="#application.cli.CommandLineApp.shell" title="Permalink to this definition">¶</a></dt>
+<dt id="application.cli.CLIApplication.print_help">
+<tt class="descname">print_help</tt><big>(</big><em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.print_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help / usage message.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="application.cli.CLIApplication.run_application">
+<em class="property">classmethod </em><tt class="descname">run_application</tt><big>(</big><em>default='--help'</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.run_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the application using the args passed from the command line.
+This is the main entry point to the application.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.cli.CLIApplication.run_tests">
+<tt class="descname">run_tests</tt><big>(</big><em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.run_tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the Test Suite (-t 2 for verbose, &#8211;quick to skip slow tests).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.cli.CLIApplication.shell">
+<tt class="descname">shell</tt><big>(</big><em>args</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=True</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.shell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call a shell command.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-application.config"></span><div class="section" id="configuration-options">
+<h2>Configuration Options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="application.config.Config">
+<em class="property">class </em><tt class="descclassname">application.config.</tt><tt class="descname">Config</tt><a class="headerlink" href="#application.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config objects store configuration options.
+Default values for each option are loaded from <cite>defaults.py</cite>,
+and can be overridden by setting a corresponding environment variable.</p>
+<dl class="method">
+<dt id="application.config.Config.defaults">
+<tt class="descname">defaults</tt><big>(</big><big>)</big><a class="headerlink" href="#application.config.Config.defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the default configuration options from <cite>defaults.py</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.config.Config.html">
+<tt class="descname">html</tt><big>(</big><big>)</big><a class="headerlink" href="#application.config.Config.html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an HTML representation of this configuration.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.config.Config.json">
+<tt class="descname">json</tt><big>(</big><big>)</big><a class="headerlink" href="#application.config.Config.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list representation of the conf,
+suitable for JSON encoding.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.config.Config.load_script">
+<tt class="descname">load_script</tt><big>(</big><em>script</em><big>)</big><a class="headerlink" href="#application.config.Config.load_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load environment variables from a bash shell script.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.config.Config.overrides">
+<tt class="descname">overrides</tt><big>(</big><big>)</big><a class="headerlink" href="#application.config.Config.overrides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override each config from a matching environment variable,
+if it exists.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-application.crud"></span><div class="section" id="crud">
+<h2>CRUD<a class="headerlink" href="#crud" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="application.crud.CRUD">
+<em class="property">class </em><tt class="descclassname">application.crud.</tt><tt class="descname">CRUD</tt><a class="headerlink" href="#application.crud.CRUD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mix-in class to implement CRUD(L) database Verbs.</p>
+<dl class="method">
+<dt id="application.crud.CRUD.create">
+<tt class="descname">create</tt><big>(</big><em>doc</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new <cite>doc</cite> in a database collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.delete">
+<tt class="descname">delete</tt><big>(</big><em>id</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a document with <cite>id</cite> from a database collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.drop_collection">
+<tt class="descname">drop_collection</tt><big>(</big><big>)</big><a class="headerlink" href="#application.crud.CRUD.drop_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drop <em>all</em> documents in a collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.list">
+<tt class="descname">list</tt><big>(</big><em>**spec</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read <strong>all</strong> documents matching <cite>spec</cite> from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.nuke">
+<tt class="descname">nuke</tt><big>(</big><em>**spec</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.nuke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove <strong>all</strong> documents matching <cite>spec</cite> from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.read">
+<tt class="descname">read</tt><big>(</big><em>id</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a document with <cite>id</cite> from the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.shovel">
+<tt class="descname">shovel</tt><big>(</big><em>docs</em>, <em>*spec</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.shovel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a <strong>collection</strong> of documents into the database.
+Return the result of listing the collection as per <cite>spec</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.crud.CRUD.update">
+<tt class="descname">update</tt><big>(</big><em>doc</em><big>)</big><a class="headerlink" href="#application.crud.CRUD.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update an existing <cite>doc</cite> in a database collection.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-application.mongodb"></span><div class="section" id="mongodb">
+<h2>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="application.mongodb.DBApplication">
+<em class="property">class </em><tt class="descclassname">application.mongodb.</tt><tt class="descname">DBApplication</tt><big>(</big><em>host</em><big>)</big><a class="headerlink" href="#application.mongodb.DBApplication" title="Permalink to this definition">¶</a></dt>
+<dd><p>This adds a MongoDB Databse connection to the Application.
+(via the <a class="reference internal" href="#application.mongodb.MongoDB" title="application.mongodb.MongoDB"><tt class="xref py py-class docutils literal"><span class="pre">MongoDB</span></tt></a> class).</p>
+<dl class="attribute">
+<dt id="application.mongodb.DBApplication.Database">
+<tt class="descname">Database</tt><a class="headerlink" href="#application.mongodb.DBApplication.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#application.mongodb.MongoDB" title="application.mongodb.MongoDB"><tt class="xref py py-class docutils literal"><span class="pre">MongoDB</span></tt></a> is the service provider class for
+connecting to the database.</p>
+<p>alias of <a class="reference internal" href="#application.mongodb.MongoDB" title="application.mongodb.MongoDB"><tt class="xref py py-class docutils literal"><span class="pre">MongoDB</span></tt></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="application.mongodb.DBApplication.database">
+<tt class="descname">database</tt><em class="property"> None</em><a class="headerlink" href="#application.mongodb.DBApplication.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Application&#8217;s MongoDB Database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.DBApplication.new_database">
+<tt class="descname">new_database</tt><big>(</big><em>host</em><big>)</big><a class="headerlink" href="#application.mongodb.DBApplication.new_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Database, opening a connection.
+This is usally the app&#8217;s <cite>Database</cite> class,
+but <cite>host=&#8221;MIM&#8221;</cite> will override this and return a
+Mongo-In-Memory connection instead.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="application.mongodb.MIM">
+<em class="property">class </em><tt class="descclassname">application.mongodb.</tt><tt class="descname">MIM</tt><big>(</big><em>host</em><big>)</big><a class="headerlink" href="#application.mongodb.MIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Mongo In-Memory database, to mock a real MongoDB connection -
+used for testing to avoid a dependency on an external database service.</p>
+<p class="graphviz">
+<img src="../_images/inheritance-361acf78fb80e18c419d37d1252e910f77e5931c.png" alt="Inheritance diagram of MIM" usemap="#inheritance5c4510e080" class="inheritance"/>
+<map id="inheritance5c4510e080" name="inheritance5c4510e080">
+<area shape="rect" id="node1" href="#application.mongodb.MongoDB" title="Interface to MongoDB. This implements a CRUD interface" alt="" coords="6,5,231,35"/>
+<area shape="rect" id="node2" href="#application.mongodb.MIM" title="A Mongo In&#45;Memory database, to mock a real MongoDB connection &#45;" alt="" coords="281,5,471,35"/>
+</map>
+</p>
+<dl class="method">
+<dt id="application.mongodb.MIM.drop_collection">
+<tt class="descname">drop_collection</tt><big>(</big><em>collection</em><big>)</big><a class="headerlink" href="#application.mongodb.MIM.drop_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Don&#8217;t delete.
+TODO - Why doesn&#8217;t this work in MIM?????.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="application.mongodb.MongoDB">
+<em class="property">class </em><tt class="descclassname">application.mongodb.</tt><tt class="descname">MongoDB</tt><big>(</big><em>host</em>, <em>port</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface to MongoDB. This implements a CRUD interface
+(Create, Read, Update, Delete) to MongoDB.</p>
+<dl class="attribute">
+<dt id="application.mongodb.MongoDB.DB_VERSION">
+<tt class="descname">DB_VERSION</tt><em class="property"> = '0.0'</em><a class="headerlink" href="#application.mongodb.MongoDB.DB_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database Version...</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.create">
+<tt class="descname">create</tt><big>(</big><em>collection</em>, <em>doc</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.create" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Create</strong> a new <cite>doc</cite> in a MongoDB <cite>collection</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.delete">
+<tt class="descname">delete</tt><big>(</big><em>collection</em>, <em>id</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Delete</strong> a document with <cite>id</cite> from a MongoDB <cite>collection</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.drop_collection">
+<tt class="descname">drop_collection</tt><big>(</big><em>collection</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.drop_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete <strong>All</strong> documents in collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.list">
+<tt class="descname">list</tt><big>(</big><em>collection</em>, <em>spec</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.list" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>List</strong> and return all doucments matching <cite>spec</cite> from a MongoDB <cite>collection</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.nuke">
+<tt class="descname">nuke</tt><big>(</big><em>collection</em>, <em>spec</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.nuke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove <strong>all</strong> documents matching <cite>spec</cite> from a MongoDB <cite>collection</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.read">
+<tt class="descname">read</tt><big>(</big><em>collection</em>, <em>id</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.read" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Read</strong> and return a document with <cite>id</cite> from a MongoDB <cite>collection</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="application.mongodb.MongoDB.update">
+<tt class="descname">update</tt><big>(</big><em>collection</em>, <em>doc</em><big>)</big><a class="headerlink" href="#application.mongodb.MongoDB.update" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Update</strong> an existing <cite>doc</cite> in a MongoDB <cite>collection</cite>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -108,6 +353,9 @@ Commands:
   <ul>
 <li><a class="reference internal" href="#">CLI</a><ul>
 <li><a class="reference internal" href="#command-line-application">Command Line Application</a></li>
+<li><a class="reference internal" href="#configuration-options">Configuration Options</a></li>
+<li><a class="reference internal" href="#crud">CRUD</a></li>
+<li><a class="reference internal" href="#mongodb">MongoDB</a></li>
 </ul>
 </li>
 </ul>

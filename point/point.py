@@ -2,7 +2,7 @@
 """Points, Angles and Geographical Coordinates
 ==============================================
 """
-from math import radians, degrees, cos, sin, sqrt, pow, atan2, pi
+from math import radians, degrees, cos, sin, sqrt, pow, atan2
 
 
 class Point(tuple):
@@ -26,6 +26,9 @@ class Point(tuple):
     @property
     def theta(self):
         return Angle.fromRadians(atan2(self.y, self.x))
+
+    def __len__(self):
+        return self.radius
 
 
 class Angle(float):

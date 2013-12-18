@@ -1,4 +1,7 @@
-from testing import run_tests
+from application import CLIApplication
+
+class Utensils(CLIApplication):
+    """Utensils: A Collection of python utility classes."""
 
 if __name__ == '__main__':
-    run_tests(None, None)
+    print Utensils.run_application(default='--help')

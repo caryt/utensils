@@ -1,0 +1,4 @@
+<map id="inheritanceda7a9e0bb9" name="inheritanceda7a9e0bb9">
+<area shape="rect" id="node1" href="#date.date.Date" title="An idealised date (year, month, day)." alt="" coords="6,5,122,35"/>
+<area shape="rect" id="node2" href="#date.date.Year" title="A Date object representing just a Year." alt="" coords="171,5,285,35"/>
+</map>

@@ -40,3 +40,19 @@ class Plural(object):
 
 		Actually, returns '' or 'n", as this allows format strings to be written as "a{n}"."""
 		return 'n' if str(noun)[0].lower() in 'aeiou' else ''
+
+
+class EnglishPlural(Plural):
+	"""Return the English plural form for a number.
+
+	Usage:
+		`EnglishPlural.plural(2, 'person', 'people')` -> *people*.
+		`EnglishPlural.plural(2, 'apple')` -> *apples*.
+		`EnglishPlural.plural(1, 'apple')` -> *apple*.
+	"""
+
+	@classmethod
+	def dual(cls, singular, plural):
+		"""Plural forms in English are the singular with an 's' appended, or the plural form."""
+		return (singular + 's') if (plural is None) else plural
+

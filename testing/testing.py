@@ -18,11 +18,3 @@ class MultipleTests(unittest.TestCase):
 	def generate_test(cls, check_fn, args, result):
 		"""Generate an individual test, and add it to this TestCase."""
 		setattr(cls, cls.fn_name(check_fn, args, result), lambda self: check_fn(self, args, result))
-
-
-def run_tests(self, arg):
-    """Run the Test Suite (-t 2 for verbose, --quick to skip slow tests).
-    """
-    verbosity = int(arg) if arg and arg[0] in digits else 1
-    testsuite = TestLoader().discover('.', 'test*.py', '.')
-    return TextTestRunner(verbosity=verbosity).run(testsuite)

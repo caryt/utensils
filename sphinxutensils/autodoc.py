@@ -8,7 +8,7 @@
 def process_docstring(app, what, name, obj, options, lines):
     """Process Docstring."""
     if what == 'class' and hasattr(obj, '__autodoc__') and '{autodoc}' in '\n'.join(lines):
-        insert = obj.__autodoc__()
+        insert = obj.__autodoc__
         for i, line in enumerate(lines):
             lines[i] = line.replace('{autodoc}', insert)
 
