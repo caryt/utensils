@@ -61,12 +61,12 @@
 <em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Fixed_Quantity</tt><a class="headerlink" href="#quantity.quantity.Fixed_Quantity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A floating quantity in a non-specific <em>fixed</em> unit.</p>
 <p class="graphviz">
-<img src="../_images/inheritance-b90f5a701b43302bd85c4f6f00fd2646ff86f438.png" alt="Inheritance diagram of Fixed_Quantity" usemap="#inheritancef39204ec8f" class="inheritance"/>
+<img src="../_images/inheritance-4653b902f253127f713f78146300a5e584344fee.png" alt="Inheritance diagram of Fixed_Quantity" usemap="#inheritancef39204ec8f" class="inheritance"/>
 <map id="inheritancef39204ec8f" name="inheritancef39204ec8f">
-<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="370,4,547,27"/>
+<area shape="rect" id="node1" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,173,27"/>
+<area shape="rect" id="node3" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="210,4,333,27"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="370,4,547,27"/>
 <area shape="rect" id="node4" href="#quantity.quantity.Fixed_Quantity" title="A floating quantity in a non&#45;specific *fixed* unit." alt="" coords="584,4,764,27"/>
-<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="210,4,333,27"/>
-<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,173,27"/>
 </map>
 </p>
 </dd></dl>
@@ -76,11 +76,11 @@
 <em class="property">class </em><tt class="descclassname">quantity.quantity.</tt><tt class="descname">Float_Quantity</tt><a class="headerlink" href="#quantity.quantity.Float_Quantity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A real number in particular units. Quantity sub-classes override <cite>units</cite> and <cite>__str__</cite>.</p>
 <p class="graphviz">
-<img src="../_images/inheritance-0a84c5a0c48c0517d60788686575c7e32275c93a.png" alt="Inheritance diagram of Float_Quantity" usemap="#inheritance5e3a44f4a9" class="inheritance"/>
+<img src="../_images/inheritance-04d9dae22e5e97732aa46deeec6690b0ed278dff.png" alt="Inheritance diagram of Float_Quantity" usemap="#inheritance5e3a44f4a9" class="inheritance"/>
 <map id="inheritance5e3a44f4a9" name="inheritance5e3a44f4a9">
-<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="478,5,706,35"/>
+<area shape="rect" id="node1" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="6,5,223,35"/>
 <area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="272,5,430,35"/>
-<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="6,5,223,35"/>
+<area shape="rect" id="node3" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="478,5,706,35"/>
 </map>
 </p>
 <dl class="attribute">
@@ -146,16 +146,16 @@
 <dd><p>A Fractional Quantity displays as a Fraction (e.g. 52/12).</p>
 <p>This is useful, for example, when converting months to weeks.</p>
 <p class="graphviz">
-<img src="../_images/inheritance-58dee64fbbe9fe161ca70c3bb450ab34118e1297.png" alt="Inheritance diagram of Fractional_Quantity" usemap="#inheritanceff9d650ac8" class="inheritance"/>
+<img src="../_images/inheritance-d23f3bf59f341e894bd04619e0e1c75f4f7c1195.png" alt="Inheritance diagram of Fractional_Quantity" usemap="#inheritanceff9d650ac8" class="inheritance"/>
 <map id="inheritanceff9d650ac8" name="inheritanceff9d650ac8">
-<area shape="rect" id="node1" title=".numerator and .denominator should be in lowest terms." alt="" coords="347,35,428,53"/>
+<area shape="rect" id="node1" href="#quantity.quantity.Fractional_Quantity" title="A Fractional Quantity displays as a Fraction (e.g. 52/12)." alt="" coords="607,19,765,37"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="482,3,578,21"/>
 <area shape="rect" id="node3" title="This class implements rational numbers." alt="" coords="490,35,570,53"/>
-<area shape="rect" id="node2" title="To Complex, Real adds the operations that work on real numbers." alt="" coords="226,35,292,53"/>
-<area shape="rect" id="node8" href="#quantity.quantity.Fractional_Quantity" title="A Fractional Quantity displays as a Fraction (e.g. 52/12)." alt="" coords="607,19,765,37"/>
-<area shape="rect" id="node4" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="322,3,453,21"/>
-<area shape="rect" id="node7" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="482,3,578,21"/>
-<area shape="rect" id="node5" title="Complex defines the operations that work on the builtin complex type." alt="" coords="113,35,197,53"/>
-<area shape="rect" id="node6" title="All numbers inherit from this class." alt="" coords="3,35,84,53"/>
+<area shape="rect" id="node4" title=".numerator and .denominator should be in lowest terms." alt="" coords="347,35,428,53"/>
+<area shape="rect" id="node5" title="To Complex, Real adds the operations that work on real numbers." alt="" coords="226,35,292,53"/>
+<area shape="rect" id="node6" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="322,3,453,21"/>
+<area shape="rect" id="node7" title="Complex defines the operations that work on the builtin complex type." alt="" coords="113,35,197,53"/>
+<area shape="rect" id="node8" title="All numbers inherit from this class." alt="" coords="3,35,84,53"/>
 </map>
 </p>
 <dl class="attribute">
@@ -180,12 +180,12 @@ e.g. 52 weeks / 12 months can be displayed as 52/12 rather than 13/3.</p>
 <dd><p>A percentage. Transparently handles a divisor of 100.
 (e.g. <cite>Percent(5)</cite> is displayed as 5% and stored as 0.05).</p>
 <p class="graphviz">
-<img src="../_images/inheritance-a8729ccde65b7fb6d703296e0105821d12b2b63d.png" alt="Inheritance diagram of Percent_Quantity" usemap="#inheritance8f849d0268" class="inheritance"/>
+<img src="../_images/inheritance-e04b8a26f3ad264637387b7ba3013765c799a178.png" alt="Inheritance diagram of Percent_Quantity" usemap="#inheritance8f849d0268" class="inheritance"/>
 <map id="inheritance8f849d0268" name="inheritance8f849d0268">
-<area shape="rect" id="node1" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="365,4,540,27"/>
+<area shape="rect" id="node1" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,171,27"/>
+<area shape="rect" id="node3" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="208,4,328,27"/>
+<area shape="rect" id="node2" href="#quantity.quantity.Float_Quantity" title="A real number in particular units. Quantity sub&#45;classes override `units` and `__str__`." alt="" coords="365,4,540,27"/>
 <area shape="rect" id="node4" href="#quantity.quantity.Percent_Quantity" title="A percentage. Transparently handles a divisor of 100." alt="" coords="577,4,764,27"/>
-<area shape="rect" id="node2" href="#quantity.quantity.Qty" title="Qty is a base class for objects with a value represented by some Units." alt="" coords="208,4,328,27"/>
-<area shape="rect" id="node3" href="#quantity.quantity.FormatSpecs" title="Mixin class to extend the Format Specification mini&#45;language." alt="" coords="5,4,171,27"/>
 </map>
 </p>
 </dd></dl>

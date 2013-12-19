@@ -1,1 +1,1 @@
-from cli import CLIApplication
+from cliapp import CLIApplication

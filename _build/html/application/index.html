@@ -54,83 +54,6 @@
             
   <div class="section" id="module-application">
 <span id="cli"></span><h1>CLI<a class="headerlink" href="#module-application" title="Permalink to this headline">¶</a></h1>
-<span class="target" id="module-application.cli"></span><div class="section" id="command-line-application">
-<h2>Command Line Application<a class="headerlink" href="#command-line-application" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="application.cli.CLI">
-<em class="property">class </em><tt class="descclassname">application.cli.</tt><tt class="descname">CLI</tt><a class="headerlink" href="#application.cli.CLI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helper class to implement a Command Line Interface.</p>
-<dl class="classmethod">
-<dt id="application.cli.CLI.add">
-<em class="property">classmethod </em><tt class="descname">add</tt><big>(</big><em>cmds</em><big>)</big><a class="headerlink" href="#application.cli.CLI.add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add to the list of commands.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="application.cli.CLI.execute">
-<tt class="descname">execute</tt><big>(</big><em>cmd</em>, <em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLI.execute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Call <cite>cmd</cite> passing <cite>arg</cite>.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="application.cli.CLIApplication">
-<em class="property">class </em><tt class="descclassname">application.cli.</tt><tt class="descname">CLIApplication</tt><a class="headerlink" href="#application.cli.CLIApplication" title="Permalink to this definition">¶</a></dt>
-<dd><p>An object that runs commands passed from an external invocation of the program.</p>
-<p>Command Line Options:</p>
-<div class="highlight-python"><pre>-b --build	Build the Sphinx Help Documentation (html or pdf).
--h --help	Print help / usage message.
--t --test	Run the Test Suite (-t 2 for verbose, --quick to skip slow tests).
-        </pre>
-</div>
-<dl class="method">
-<dt id="application.cli.CLIApplication.build_docs">
-<tt class="descname">build_docs</tt><big>(</big><em>format</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.build_docs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build the Sphinx Help Documentation (html or pdf).</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="application.cli.CLIApplication.new_application">
-<em class="property">classmethod </em><tt class="descname">new_application</tt><big>(</big><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.new_application" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method can be subclassed to return a alternative application
-object when testing. (Useful for mocking).</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="application.cli.CLIApplication.open_file">
-<tt class="descname">open_file</tt><big>(</big><em>fname</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.open_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Open local file <cite>fname</cite> in a web browser.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="application.cli.CLIApplication.print_help">
-<tt class="descname">print_help</tt><big>(</big><em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.print_help" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print help / usage message.</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="application.cli.CLIApplication.run_application">
-<em class="property">classmethod </em><tt class="descname">run_application</tt><big>(</big><em>default='--help'</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.run_application" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run the application using the args passed from the command line.
-This is the main entry point to the application.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="application.cli.CLIApplication.run_tests">
-<tt class="descname">run_tests</tt><big>(</big><em>arg</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.run_tests" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run the Test Suite (-t 2 for verbose, &#8211;quick to skip slow tests).</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="application.cli.CLIApplication.shell">
-<tt class="descname">shell</tt><big>(</big><em>args</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=True</em><big>)</big><a class="headerlink" href="#application.cli.CLIApplication.shell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Call a shell command.</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <span class="target" id="module-application.config"></span><div class="section" id="configuration-options">
 <h2>Configuration Options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -352,7 +275,6 @@ TODO - Why doesn&#8217;t this work in MIM?????.</p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">CLI</a><ul>
-<li><a class="reference internal" href="#command-line-application">Command Line Application</a></li>
 <li><a class="reference internal" href="#configuration-options">Configuration Options</a></li>
 <li><a class="reference internal" href="#crud">CRUD</a></li>
 <li><a class="reference internal" href="#mongodb">MongoDB</a></li>
