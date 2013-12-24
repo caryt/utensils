@@ -34,13 +34,11 @@ class HTMLTestRunner(Runner):
         """Run the testsuite, saving report to fname."""
         self.fname = join(abspath('.'), 'testResults.html')
         with file(self.fname, 'wb') as fp:
-            runner = Runner(
-                stream      = fp,
-                title       = 'Unit Tests',
-                description = 'Summary of Test Run.',
-            )
-            results = runner.run(testsuite)
-            self.print_summary(results)
+            self.stream = fp
+            self.title = 'Unit Tests'
+            self.description = 'Summary of Test Run.'
+            results = Runner.run(self, testsuite)
+        self.print_summary(results)
         return results
 
 
